@@ -241,6 +241,7 @@ var fs = require("fs");
 // This block of code will read from the "movies.txt" file.
 // It's important to include the "utf8" parameter or the code will provide stream data (garbage)
 // The code will store the contents of the reading inside the variable "data"
+
 fs.readFile("random.txt", "utf8", function(error, data) {
 
   // If the code experiences any errors it will log the error to the console.
@@ -248,10 +249,16 @@ fs.readFile("random.txt", "utf8", function(error, data) {
     return console.log(error);
   }
   menu();
+  var lines = process.stdout.getWindowSize()[1];
+                for(var i = 0; i < lines; i++) {
+                console.log('\r\n');
+                var fs = require("fs");
+                
+                }
 
   // We will then print the contents of 
   data
-  console.log(colors.blue("\n" + data + "\n"));
+  console.log(colors.yellow("\n" + data + "\n"));
 
   // Then split it by commas (to make it more readable)
   var dataArr = data.split(",");
@@ -261,6 +268,7 @@ fs.readFile("random.txt", "utf8", function(error, data) {
 
 });
                 }
+                
                 if (inquirerResponse.choices == "Exit") {
                     var lines = process.stdout.getWindowSize()[1];
                     for(var i = 0; i < lines; i++) {
