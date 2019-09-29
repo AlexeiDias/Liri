@@ -122,7 +122,7 @@ inquirer
         }
       ])
       .then(function(response){
-        console.log(response.bandInfo);
+        // console.log(response.bandInfo);
        
         var bandsInTown = "https://rest.bandsintown.com/artists/" + response.bandInfo + "/events?app_id=codingbootcamp"
         var axios = require("axios");
@@ -134,7 +134,7 @@ axios
   .then(function(response) {
     // If the axios was successful...
     // Then log the body from the site!
-    console.log(response.data);
+    // console.log(response.data);
     
       console.log(colors.blue("\nThe Venue name is") + " " + (colors.yellow(response.data[0].venue.name + "\n")));
 
@@ -142,6 +142,7 @@ axios
 
       
       console.log(colors.blue("\nThe date for this concert is ") + " " + (colors.yellow(moment(response.data[0].datetime).format("MM-DD-YYYY") + "\n")));
+      menu();
     })
   
   .catch(function(error) {
@@ -246,7 +247,7 @@ fs.readFile("random.txt", "utf8", function(error, data) {
   if (error) {
     return console.log(error);
   }
-
+  menu();
 
   // We will then print the contents of 
   data
