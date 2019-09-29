@@ -13,7 +13,7 @@ inquirer
     {
       type: "list",
       message: colors.green("What would you like me do?"),
-      choices: ["spotify a song info", "Up coming artists performances", "Movie info", "tell me a joke"],
+      choices: ["spotify a song info", "Up coming artists performances", "Movie info", "tell me a joke","Exit"],
       name: "choices"
     },
   ])
@@ -261,6 +261,23 @@ fs.readFile("random.txt", "utf8", function(error, data) {
 
 });
                 }
+                if (inquirerResponse.choices == "Exit") {
+                    var lines = process.stdout.getWindowSize()[1];
+                    for(var i = 0; i < lines; i++) {
+                    console.log('\r\n');
+                    var fs = require("fs");
+            
+                }
+                    console.log(colors.yellow.bold("See you next time\n"));
+                  // console.log("random.txt here");
+                  // fs is a core Node package for reading and writing files
+    
+    
+    // This block of code will read from the "movies.txt" file.
+    // It's important to include the "utf8" parameter or the code will provide stream data (garbage)
+    // The code will store the contents of the reading inside the variable "data"
+   
+                    }
   });
 }
 menu();

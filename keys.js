@@ -4,7 +4,7 @@ var colors = require('colors');
         console.log('\r\n');
         
         }
-console.log(colors.blue('\nHello, welcome to\n'));
+console.log(colors.green('\nHello, welcome to\n'));
 console.log(colors.yellow.bold("Liri!\n"));
 exports.spotify = {
     id: process.env.SPOTIFY_ID,
