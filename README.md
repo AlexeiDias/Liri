@@ -10,7 +10,7 @@
 
 ------
 ### Video Demo
-[![Liri Demo video]](https://player.vimeo.com/video/363095338 "Liri Demo video")
+[![Liri Demo video](./Liriscrennshot.png)](https://player.vimeo.com/video/363095338 "Liri Demo video")
 
 ---
 
