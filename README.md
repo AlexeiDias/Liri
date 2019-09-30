@@ -10,7 +10,8 @@
 
 ------
 ### Video Demo
-https://vimeo.com/363095338
+[![Liri Demo video]](https://player.vimeo.com/video/363095338 "Liri Demo video")
+
 ---
 
 ## Technologies usen on the project
